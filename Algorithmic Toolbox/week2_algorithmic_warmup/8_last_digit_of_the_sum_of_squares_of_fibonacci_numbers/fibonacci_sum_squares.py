@@ -10,11 +10,12 @@ def fibonacci_sum_squares_naive(n):
     sum      = 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
+        previous, current = current, (previous + current)%10
         sum += current * current
 
     return sum % 10
 
-if __name__ == '__main__':
-    n = int(stdin.read())
-    print(fibonacci_sum_squares_naive(n))
+# if __name__ == '__main__':
+    # n = int(stdin.read())
+n = int(input())
+print(fibonacci_sum_squares_naive(n))

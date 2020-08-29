@@ -10,12 +10,11 @@ def fibonacci_sum_naive(n):
     sum      = 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
+        previous, current = current, (previous + current)%n
         sum += current
 
     return sum % 10
 
-if __name__ == '__main__':
-    input = sys.stdin.read()
-    n = int(input)
-    print(fibonacci_sum_naive(n))
+# input = sys.stdin.read()
+n = int(input())
+print(fibonacci_sum_naive(n))
