@@ -5,6 +5,7 @@ using std::vector;
 
 int lcs2(vector<int> &a, vector<int> &b) {
   //write your code here
+  
   return std::min(std::min(a.size(), b.size()), c.size());
 }
 
