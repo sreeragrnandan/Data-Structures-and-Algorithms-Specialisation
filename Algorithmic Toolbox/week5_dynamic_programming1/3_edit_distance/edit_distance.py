@@ -15,7 +15,7 @@ def edit_distance(s, t):
             else:
                d[i][j] = min(d[i][j-1], d[i-1][j], d[i-1][j-1]) + 1
     
-    return d[m][n]
+    return d[m][n]6
 
 if __name__ == "__main__":
     print(edit_distance(input(), input()))

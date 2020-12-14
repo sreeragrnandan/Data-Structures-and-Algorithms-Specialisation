@@ -3,15 +3,15 @@ import sys
 
 def get_change(m):
     #write your code here
-    coin = [10, 5, 1]
+    coin = [4, 3, 1]
     i = 0
     n = 0
     while m != 0:
-        if m < coin[i]:
-            i += 1
-        while m >= coin[i]:
+        if coin[i] <= m:
             m -= coin[i]
-            n += 1 
+            n += 1
+        else:
+            i += 1
     return n
 
 # if __name__ == '__main__':
